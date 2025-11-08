@@ -48,8 +48,7 @@ Follow these steps to set up the development environment:
 
 1.  Clone this repository to your local machine:
     ```bash
-    git clone [YOUR_REPO_URL_HERE]
-    cd [PROJECT_DIRECTORY_NAME]
+    git clone https://github.com/Erwann-RAMBEAUX/Oops-Hunter
     ```
 
 2.  Create and activate a Python virtual environment:
