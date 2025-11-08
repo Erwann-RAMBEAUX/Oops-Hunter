@@ -1,97 +1,93 @@
-# Projet PPII - Semestre S5
+# Oops Hunter - Sensitive Data Leak Detector
 
-## Table des matières
-1. [Introduction](#introduction)
-2. [Membres du groupe](#membres-du-groupe)
-3. [Description du projet](#description-du-projet)
-4. [Prérequis](#prérequis)
-5. [Installation](#installation)
-6. [Exécution](#exécution)
+![Python](https://img.shields.io/badge/Python-3.11-blue.svg)
+![Flask](https://img.shields.io/badge/Flask-black.svg)
+![Tesseract](https://img.shields.io/badge/Tesseract-OCR-lightgrey.svg)
+![Status](https://img.shields.io/badge/Status-Academic%20Project-lightgreen.svg)
+
+A web application designed to analyze documents and detect the presence of sensitive data. This project provides a detailed analysis history and assigns a risk score to users based on their submissions.
+
+> **Note:** This is a group academic project developed as part of the PPII (Multidisciplinary IT Engineering Project) module at Télécom Nancy.
+
+## Table of Contents
+1. [Key Features](#key-features)
+2. [Technologies Used](#technologies-used)
+3. [Prerequisites](#prerequisites)
+4. [Installation](#installation)
+5. [Running and Usage](#running-and-usage)
 
 ---
 
-## Introduction
+## 🎯 Key Features
 
-Ce projet, réalisé dans le cadre de ma 1ère année à Telecom Nancy.
+* **Document Analysis:** Detects the presence of sensitive data (configurable) in uploaded files.
+* **Supported File Types:** `.pdf`, `.md`, `.docx`, `.xlsx`, `.txt`.
+* **Analysis History:** Maintains a detailed log of all analyses performed by users.
+* **User Risk Scoring:** Assigns a score to users based on the number of documents with data leaks they have submitted.
+* **Admin Panel:** Allows for managing user accounts and configuring the types of sensitive data to search for.
+    * *Note: In the current version, only the addition of new data types based on regex algorithms is fully functional.*
 
-Bienvenue dans le projet **PPII - Semestre S5**. Ce projet est réalisé dans le cadre du semestre 5 pour l'unité PPII. Vous trouverez ici toutes les informations nécessaires pour comprendre, installer, et exécuter le projet.
+## 🛠️ Technologies Used
 
+* **Backend:** Python, Flask
+* **Frontend:** HTML, CSS, Bootstrap
+* **OCR (Optical Character Recognition):** Tesseract
+* **Python Dependencies:** See `requirements.txt`
 
-## Membres du groupe
+## 📋 Prerequisites
 
-- **ALLOMBERT BLAISE Oscar ** - [oscar.allombert-blaise@telecomnancy.eu](mailto:oscar.allombert-blaise@telecomnancy.eu)
-- **RAMBEAUX Erwann ** - [erwann.rambeaux@telecomnancy.eu](mailto:erwann.rambeaux@telecomnancy.eu)
-- **KAMAL JIT Navjit ** - [navjit.kamal-jit9@etu.univ-lorraine.fr](mailto:navjit.kamal-jit9@etu.univ-lorraine.frm)
-- **GODAIL FABRIZIO Giuliana ** - [giuliana.godail-fabrizio1@etu.univ-lorraine.fr](mailto:giuliana.godail-fabrizio1@etu.univ-lorraine.fr)
+Before you begin, ensure you have the following installed on your system:
 
+* **Python** (v3.11.5 or higher)
+* **Tesseract OCR**
+    * Follow the [official documentation](https://tesseract-ocr.github.io/tessdoc/Installation.html) to install it on your operating system.
 
-## Description du projet
+## 🚀 Installation
 
-Ajoutez ici une description du projet, ses objectifs, et toute autre information pertinente :
+Follow these steps to set up the development environment:
 
-- **Sujet :** Application d’analyse et de détection de fuites de données sensibles
-- **Objectifs :** Avoir une application capable de détecter la présence de données sensibles dans un document, tout en offrant un historique détaillé des analyses réalisées. L’application attribue également un score aux utilisateurs en fonction du nombre de documents contenant des fuites qu'ils ont publiés.
-- **Types de fichiers pris en charge  :** .pdf, .md, .docx, .xlsx, .txt
-- **Technologies utilisées :** Python, Flask, HTML, CSS, Bootstrap, Tesseract
-
-
-## Prérequis
-
-Listez les prérequis nécessaires pour utiliser ce projet (langages, dépendances, etc.) :
-
-- **Langage(s) :** Python 3.11.5, 
-- **Frameworks :** Flask, Bootstrap
-- **Dépendances :** Voir le fichier `requirements.txt`.
-- **Logiciel :** Tesseract
-
-
-## Installation
-
-
-### Étapes générales :
-
-1. Clonez ce dépôt :
-   ```bash
-   git clone https://gibson.telecomnancy.univ-lorraine.fr/projets/2425/ppii-s5/grp29
-   cd grp29
-   ```
-2. Installation de Tesseract:
-
-    Suivre la [documentation](https://tesseract-ocr.github.io/tessdoc/Installation.html)
-
-3. Faites un environnement virtuel : 
+1.  Clone this repository to your local machine:
     ```bash
-    python -m venv venv
-    source venv/bin/activate
+    git clone [YOUR_REPO_URL_HERE]
+    cd [PROJECT_DIRECTORY_NAME]
     ```
 
+2.  Create and activate a Python virtual environment:
+    ```bash
+    # Create the environment
+    python -m venv venv
+    
+    # Activate on macOS/Linux
+    source venv/bin/activate
+    
+    # Activate on Windows (PowerShell/CMD)
+    .\venv\Scripts\activate
+    ```
 
-4. Installez les dépendances:
+3.  Install the required Python dependencies:
     ```bash
     pip install -r requirements.txt
     ```
 
+## ▶️ Running and Usage
 
-## Exécution
-1. Lancer l'application :
-
+1.  Launch the Flask application from your terminal:
     ```bash
     flask --app index run
     ```
-2. Se connecter :
-    ```text
-        Compte 1:
-        antoine.delacroix@gmail.com
-        password
 
-        Compte 2:
-        marie.dubois@gmail.com
-        securepass
-    ```
+2.  Open your browser and navigate to `http://127.0.0.1:5000` (or the address shown in your terminal).
 
-3. Ajouter un document à analyser
-4. Cliquer sur le bouton "Analyze"
-5. Affichage du résultat de l'analyse
-6. Possibilité de voir l'historique des analyses 
-7. Partie administration permettant de voir les différents comptes de l'application et les types de données sensibles que l'on cherche dans les documents
-8. Possibilité d'ajouter des comptes / des types de données (seulement l'algorithme regex fonctionne dans les ajouts)
+3.  Log in with one of the demo accounts:
+
+    **Account 1:**
+    * **Email:** `antoine.delacroix@gmail.com`
+    * **Password:** `password`
+
+    **Account 2:**
+    * **Email:** `marie.dubois@gmail.com`
+    * **Password:** `securepass`
+
+4.  Use the interface to add a document and click "Analyze".
+5.  View the analysis results or navigate to the history to see past scans.
+6.  Explore the "Administration" section to manage accounts and data types.
